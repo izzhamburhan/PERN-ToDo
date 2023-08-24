@@ -10,11 +10,11 @@ const App = () => {
   const userEmail = 'izzham@test.com';
   const [ tasks, setTasks ] = useState(null)
 
-  const authToken = true
+  const authToken = false
   
   const getData = async() => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${userEmail}`)
+      const response = await fetch(`http://localhost:8000/todos/${userEmail}`)
       const json = await response.json()
       console.log(json)
       setTasks(json)
@@ -23,7 +23,11 @@ const App = () => {
     }
   }
 
-  useEffect(() => getData , [] )
+  useEffect(() => {
+    if(authToken){
+      getData()
+    }
+  },[])
 
   console.log(tasks)
 
