@@ -7,6 +7,7 @@ const App = () => {
 
   const userEmail = 'izzham@test.com';
   const [ tasks, setTasks ] = useState(null)
+  
   const getData = async() => {
     
     try {
@@ -28,8 +29,8 @@ const App = () => {
 
   return (
     <div className="app"> 
-      <ListHeader listName={'💻 Intern Tick List'} />
-      {sortedTasks?.map((task) => <ListItem key={task.id} task={task} />)}
+      <ListHeader listName={'💻 Intern Tick List'} getData={getData}/>
+      {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData}/>)}
     </div>
   )
 }
