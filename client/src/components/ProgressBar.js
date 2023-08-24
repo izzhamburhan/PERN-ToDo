@@ -5,5 +5,5 @@ const ProgressBar = () => {
     )
   }
   
-  export default ProgressBar;
+  export default ProgressBar
   

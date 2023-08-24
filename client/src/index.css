@@ -9,14 +9,14 @@ body{
 
 .app{
     background-color: rgb(255,255,255);
-    box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24x, rgba(0, 0, 0, 0.8) 0 0 0 1px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24x, rgba(0, 0, 0, 0.08) 0 0 0 1px;
     border-radius: 10px;
     padding: 10px;
     width: 800px;
     margin-top: 50px;
 }
 
-.button-container {
+.button-container, .info-container {
     display: flex;
     align-items: center;
 }
@@ -38,3 +38,13 @@ body{
     border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
 }
 
+/* list item */
+
+.list-item{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0 0 0 1px;
+    display: flex;
+    justify-content: space-between;
+}
